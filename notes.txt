@@ -1,0 +1,24 @@
+Marshmallow handles serialization and deserialization of JSON objects
+SQLAlchemy is an ORM tool
+
+https://flask-marshmallow.readthedocs.io/en/latest/
+
+mkdir python_rest_marshmallow
+cd python_rest_marshmallow
+py -3 -m venv venv
+venv\Scripts\activate
+pip install flask flask-sqlalchemy flask_marshmallow marshmallow-sqlalchemy
+pip freeze
+Install sqlite3: https://sqlite.org/2019/sqlite-tools-win32-x86-3280000.zip
+
+$ python
+>>> from crud import db
+>>> db.create_all()
+This generates crud.sqlite
+
+Notice JSON(application/json) type in Postman (see add_user.png)
+
+http://localhost:5000/user - POST
+http://localhost:5000/user - GET all
+http://localhost:5000/user/1 - DELETE
+http://localhost:5000/user/1 - PUT
